@@ -1,0 +1,30 @@
+.navbar{
+    height: 100vh;
+    background-color: transparent;
+    border-right: 2px solid  #D36161;
+    width: 5%;
+    position: fixed;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    .btn-profile, .btn-dashboard{
+        background-color: #D36161;
+        border: none;
+        outline: none;
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: .2s;
+        &:hover{
+            background-color: #df4343;
+            transition: .2s;
+        }
+    }
+}

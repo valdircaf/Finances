@@ -1,13 +1,17 @@
-export function ok(code){
+import { getUserValues } from "./validateUser";
+import { Dashboard } from "../Static/Templates/Dashboard";
+import { LoginContext } from "../Contexts/LoginContext";
+
+export function ok(code, render){
     if(code === 200){
-        window.location.href = "/dashboard"
+        render(true);
     }
     else{
         alert("Usuário já existe!");
     }
 }
 
-export function addUserValue(login, password){
+export function addUserValue(login, password, render){
     
     if(login != "" && password != ""){
         const data = {
@@ -23,7 +27,9 @@ export function addUserValue(login, password){
                 },
                 body: JSON.stringify(data)
             }).then(response => {
-                ok(response.status);
+                    setTimeout(()=>{
+                        ok(response.status, render);    
+                    }, 1000)
             }).catch(e => console.error(e));
         } catch{
             console.log("Bad Request");

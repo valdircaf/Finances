@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;700;800;900&display=swap');
+@keyframes showH2 {
+    from{
+        opacity: 0;
+        transform: scale(1.1);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.hide{
+    display: none;
+}
+
+.card{
+    background: transparent;
+    border: 2px solid #D36161;
+    width: 17rem;
+    height: 8rem;
+    border-radius: .8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: all .5s;
+    // box-shadow: 2px 0px 5px 1px rgba(0, 0, 0, 0.595);
+    &:hover{
+        transition: .2s;
+        transform: scale(1.1);
+    }
+    .title{
+        display: flex;
+        gap: .5rem;
+        align-items: center;
+        h1{
+            font-weight: 400;
+            color: var(--Title-dashboard-boxes, #9B9B9B);
+        }
+        .color{
+            width: 1.5rem;
+            height: 1.5rem;
+            background: var(--Green-light, #D36161);
+            border-radius: .5rem;
+        }
+    }
+    .title, .value{
+        padding-left: 10%;
+    }
+    .value{
+        h2{
+            font-size: 1.5rem;
+            font-weight: 500;
+            animation: showH2 .5s;
+        }
+    }
+}

@@ -10,9 +10,8 @@
 }
 
 .dashboard{
-    background: var(--White-color, #EAF2EC);
+    background: var(--White-color, #ffffff);
     margin-left: 5%;
-
     .content{
         padding: 5% 0 0 5%;
         display: flex;
@@ -28,7 +27,7 @@
         }
 
         .btn-add{
-            background: var(--Primary-color, #D36161);
+            background: var(--Primary-color, #E91010);
             border: none;
             color: #EAF2EC;
             outline: none;
@@ -51,7 +50,7 @@
             .expand-salary{
                 width: 17rem;
                 height: 8rem;
-                border: 2px solid #df4343;
+                border: 2px solid #E91010;
                 border-radius: .8rem;
                 display: flex;
                 flex-direction: column;
@@ -71,7 +70,7 @@
                     }
                 }
                 button{
-                    background: var(--Primary-color, #D36161);
+                    background: #E91010;
                     border: none;
                     color: #EAF2EC;
                     outline: none;
@@ -93,7 +92,7 @@
                 flex-direction: column;
                 gap: 1rem;
                 button{
-                    background: var(--Primary-color, #D36161);
+                    background: #E91010;
                     border: none;
                     color: #EAF2EC;
                     outline: none;
@@ -121,7 +120,7 @@
                 .showListExpenses{
                     width: 30rem;
                     min-height: 20rem;
-                    border: 2px solid #D36161;
+                    border: 2px solid #E91010;
                     background-color: transparent;
                     border-radius: .8rem;
                     display: flex;
@@ -154,7 +153,7 @@
                             }
                         }
                         .btn-add-expense{
-                            background: var(--Primary-color, #D36161);
+                            background: #E91010;
                             border: none;
                             color: #EAF2EC;
                             outline: none;
@@ -175,7 +174,7 @@
                         align-items: center;
                         gap: 1rem;
                         .btn-rmv-expense{
-                            background: var(--Primary-color, #D36161);
+                            background: #E91010;
                             border: none;
                             color: #EAF2EC;
                             outline: none;
@@ -193,6 +192,101 @@
                     }
                 }
             }
+            .expand-other-costs{
+                width: 30rem;
+                min-height: 20rem;
+                border: 2px solid #E91010;
+                background-color: transparent;
+                border-radius: .8rem;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+                .list-other-costs{
+                    display: flex;
+                    gap: 1rem;
+                    flex-direction: column;
+                    ul{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1rem;
+                        section{
+                            display: flex;
+                            gap: 1rem;
+                            align-items: center;
+                            button{
+                                background: #E91010;
+                                border: none;
+                                color: #EAF2EC;
+                                outline: none;
+                                height: 2rem;
+                                width: 20%;
+                                text-align: center;
+                                font-size: .8rem;
+                                cursor: pointer;
+                                transition: .2s;
+                                &:hover{
+                                    background-color: #df4343;
+                                    transition: .2s;
+                                }
+                            }
+                        }
+                        li{
+                            list-style: none;
+                        }
+                    }
+                }
+                form{
+                    display: flex;
+                    gap: .2rem;
+                    input{
+                        background: none;
+                        border: 1px solid var(--Black-color, #0B0F0C);
+                        color: #0B0F0C;
+                        outline: none;
+                        height: 2.5rem;
+                        width: 14rem;
+                        text-align: center;
+                        font-size: .8rem;
+                        &::placeholder{
+                            color: #0B0F0C;
+                            font-size: .8rem;
+                        }
+                    }
+                    button{
+                        background: #E91010;
+                        border: none;
+                        color: #EAF2EC;
+                        outline: none;
+                        height: 2.5rem;
+                        width: 20%;
+                        text-align: center;
+                        font-size: .8rem;
+                        cursor: pointer;
+                        transition: .2s;
+                        &:hover{
+                            background-color: #df4343;
+                            transition: .2s;
+                        }
+                    }
+                }
+                .close-expand-cost{
+                    background: #E91010;
+                    border: none;
+                    color: #EAF2EC;
+                    outline: none;
+                    height: 2.5rem;
+                    width: 100%;
+                    text-align: center;
+                    font-size: .8rem;
+                    cursor: pointer;
+                    transition: .2s;
+                    &:hover{
+                        background-color: #df4343;
+                        transition: .2s;
+                    }
+                }
+            }
             .other-costs{
                 display: flex;
                 flex-direction: column;
@@ -204,5 +298,9 @@
             }
 
         }
+    }
+    .total{
+        padding-left: 5%;
+        margin: 5% 0 5% 0;
     }
 }

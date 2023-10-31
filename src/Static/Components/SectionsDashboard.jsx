@@ -127,7 +127,7 @@ export default function SectionsDashboard({
                       }
                       setTimeout(() => {
                         getRequisitions();
-                      }, 300);
+                      }, 1200);
                     }}
                   >
                     <AiFillDelete />
@@ -147,7 +147,7 @@ export default function SectionsDashboard({
                       }
                       setTimeout(() => {
                         getRequisitions();
-                      }, 300);
+                      }, 1200);
                     }}
                   >
                     <AiFillDelete />

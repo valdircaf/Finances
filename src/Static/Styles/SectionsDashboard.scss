@@ -37,6 +37,9 @@
     padding: 1rem;
     border-radius: 10px;
     animation: enter-section .5s;
+    @media screen and (max-width: 600px){
+        max-width: 25rem;
+    }
     .list-and-svg{
         display: flex;
         align-items: center;
@@ -88,16 +91,22 @@
         justify-content: center;
         gap: 2%;
         margin-top: 2rem;
+        @media screen and (max-width: 600px){
+            flex-direction: column;
+            gap: .5rem;
+        }
         .inputs{
             width: 40%;
             background: none;
             outline: none;
             border: 1px solid #FFF;
             height: 2rem;
-            width: 33%;
             text-align: center;
             color: #FFF;
             font-weight: 200;
+            @media screen and (max-width: 600px){
+                width: 80%;
+            }
         }
         > button{
             width: 8rem;
@@ -109,6 +118,9 @@
             font-weight: 100;
             font-size: .8rem;
             cursor: pointer;
+            @media screen and (max-width: 600px){
+                width: 80%;
+            }
         }
     }    
 }

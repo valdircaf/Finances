@@ -32,7 +32,7 @@ export default function SectionsDashboard({
   useEffect(() => {
     if (name === "expense") {
       try {
-        fetch(`https://financesdatabase.onrender.com/users/${localStorage.getItem("id")}`, {
+        fetch(`${process.env.REACT_APP_DATABASE_URL}users/${localStorage.getItem("id")}`, {
           method: "GET",
         })
           .then((response) => response.json())
@@ -50,7 +50,7 @@ export default function SectionsDashboard({
       }
     } else if (name === "costs") {
       try {
-        fetch(`https://financesdatabase.onrender.com/users/${localStorage.getItem("id")}`, {
+        fetch(`${process.env.REACT_APP_DATABASE_URL}users/${localStorage.getItem("id")}`, {
           method: "GET",
         })
           .then((response) => response.json())
@@ -72,7 +72,7 @@ export default function SectionsDashboard({
   function getRequisitions() {
     if (name === "expense") {
       try {
-        fetch(`https://financesdatabase.onrender.com/users/${localStorage.getItem("id")}`, {
+        fetch(`${process.env.REACT_APP_DATABASE_URL}users/${localStorage.getItem("id")}`, {
           method: "GET",
         })
           .then((response) => response.json())
@@ -90,7 +90,7 @@ export default function SectionsDashboard({
       }
     } else if (name === "costs") {
         try {
-            fetch(`https://financesdatabase.onrender.com/users/${localStorage.getItem("id")}`, {
+            fetch(`${process.env.REACT_APP_DATABASE_URL}users/${localStorage.getItem("id")}`, {
               method: "GET",
             })
               .then((response) => response.json())

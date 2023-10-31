@@ -7,7 +7,7 @@ export function addExtense(id, expenseName, expenseValue){
 
     if(expenseName != "" && expenseValue != 0){
         try{
-            fetch(`https://financesdatabase.onrender.com/${id}/expense`, {
+            fetch(`${process.env.REACT_APP_DATABASE_URL}${id}/expense`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

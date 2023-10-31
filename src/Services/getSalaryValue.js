@@ -1,6 +1,6 @@
 export function getSalaryValue(id){
     try{
-        fetch(`https://financesdatabase.onrender.com/users/${id}`, {
+        fetch(`${process.env.REACT_APP_DATABASE_URL}users/${id}`, {
             method: "GET"
         }).then(response => response.json()).then(data => {
             console.log(data.salary);

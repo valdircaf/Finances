@@ -6,7 +6,7 @@ export function addCost(id, costName, costPrice){
     }
 
     try{
-        fetch(`https://financesdatabase.onrender.com/${id}/othercosts`, {
+        fetch(`${process.env.REACT_APP_DATABASE_URL}${id}/othercosts`, {
             method: "POST",
             headers:{
                 "Content-Type": "application/json"

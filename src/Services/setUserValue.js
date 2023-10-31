@@ -7,6 +7,7 @@ export function ok(code, render){
     }
 }
 
+
 export function addUserValue(login, password, render){
     
     if(login != "" && password != ""){
@@ -16,7 +17,7 @@ export function addUserValue(login, password, render){
         }
     
         try{
-            fetch("https://financesdatabase.onrender.com/users", {
+            fetch(`${process.env.REACT_APP_DATABASE_URL}users`, {
                 method: "POST",
                 headers: {
                     "Content-Type" : "application/json"

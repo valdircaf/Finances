@@ -7,7 +7,7 @@ export function validateUser(name, password){
 
    
     try{
-        fetch("https://financesdatabase.onrender.com/users", {
+        fetch(`${process.env.REACT_APP_DATABASE_URL}users`, {
             method: "GET"
         }).then(response => response.json()).then(data => {
             if(data.length > 0){

@@ -37,7 +37,7 @@ export function Dashboard() {
   useEffect(() => {
     try {
       //GET SALARY
-      fetch(`https://financesdatabase.onrender.com/users/${localStorage.getItem("id")}`, {
+      fetch(`${process.env.REACT_APP_DATABASE_URL}users/${localStorage.getItem("id")}`, {
         method: "GET",
       })
         .then((response) => response.json())
@@ -47,7 +47,7 @@ export function Dashboard() {
         .catch((e) => console.error(e));
 
       //GET EXPENSES
-      fetch(`https://financesdatabase.onrender.com/users/${localStorage.getItem("id")}`, {
+      fetch(`${process.env.REACT_APP_DATABASE_URL}users/${localStorage.getItem("id")}`, {
         method: "GET",
       })
         .then((response) => response.json())
@@ -61,7 +61,7 @@ export function Dashboard() {
         .catch((e) => console.error(e));
 
       //GET COSTS
-      fetch(`https://financesdatabase.onrender.com/users/${localStorage.getItem("id")}`, {
+      fetch(`${process.env.REACT_APP_DATABASE_URL}users/${localStorage.getItem("id")}`, {
         method: "GET",
       })
         .then((response) => response.json())

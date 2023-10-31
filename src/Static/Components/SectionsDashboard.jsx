@@ -123,11 +123,8 @@ export default function SectionsDashboard({
                     onClick={(e) => {
                       e.preventDefault();
                       if (name === "expense") {
-                        deleteExpense(localStorage.getItem("id"), item.id);
+                        deleteExpense(localStorage.getItem("id"), item.id, getRequisitions);
                       }
-                      setTimeout(() => {
-                        getRequisitions();
-                      }, 1200);
                     }}
                   >
                     <AiFillDelete />
@@ -143,11 +140,8 @@ export default function SectionsDashboard({
                     onClick={(e) => {
                       e.preventDefault();
                       if (name === "costs") {
-                        deleteCost(item.id, localStorage.getItem("id"));
+                        deleteCost(item.id, localStorage.getItem("id"), getRequisitions);
                       }
-                      setTimeout(() => {
-                        getRequisitions();
-                      }, 1200);
                     }}
                   >
                     <AiFillDelete />
@@ -189,15 +183,17 @@ export default function SectionsDashboard({
         <button
           type="submit"
           onClick={(e) => {
-            e.preventDefault();
+            try{
+              e.preventDefault();
             if (name === "expense") {
-              addExtense(localStorage.getItem("id"), inputName, inputValue);
+              addExtense(localStorage.getItem("id"), inputName, inputValue, getRequisitions);
             } else if(name === "costs"){
-                addCost(localStorage.getItem("id"), inputName, inputValue);
+                addCost(localStorage.getItem("id"), inputName, inputValue, getRequisitions);
+              }
+            }catch(e){
+              console.log(e);
             }
-            setTimeout(() => {
-              getRequisitions();
-            }, 300);
+              
           }}
         >
           Adicionar

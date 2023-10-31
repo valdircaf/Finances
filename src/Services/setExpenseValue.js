@@ -1,4 +1,4 @@
-export function addExtense(id, expenseName, expenseValue){
+export function addExtense(id, expenseName, expenseValue, callback){
 
     let data = {
         name: expenseName,
@@ -13,7 +13,7 @@ export function addExtense(id, expenseName, expenseValue){
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify(data)
-            }).then(response => console.log(response)).catch(er => console.error(er))
+            }).then(response => callback()).catch(er => console.error(er))
         }catch(e){
             console.error(e);
         }

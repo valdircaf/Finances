@@ -6,7 +6,7 @@ export function setSalaryValue(id, salary){
         salary : salary
     }
     try{
-        fetch(`http://localhost:8080/users/${id}`, {
+        fetch(`https://financesdatabase.onrender.com/users/${id}`, {
             method: "PUT",
             headers: {
                 "Content-Type" : "application/json"

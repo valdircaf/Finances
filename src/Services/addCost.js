@@ -6,7 +6,7 @@ export function addCost(id, costName, costPrice){
     }
 
     try{
-        fetch(`http://localhost:8080/${id}/othercosts`, {
+        fetch(`https://financesdatabase.onrender.com/${id}/othercosts`, {
             method: "POST",
             headers:{
                 "Content-Type": "application/json"

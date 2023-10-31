@@ -10,6 +10,17 @@
     }
 }
 
+@keyframes enter-card {
+    from{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 .hide{
     display: none;
 }
@@ -28,6 +39,7 @@
     cursor: pointer;
     transition: all .5s;
     // box-shadow: 2px 0px 5px 1px rgba(0, 0, 0, 0.595);
+    animation: enter-card .5s;
     &:hover{
         transition: .2s;
         transform: scale(1.1);
@@ -55,6 +67,7 @@
             font-size: 1.5rem;
             font-weight: 500;
             animation: showH2 .5s;
+            color: #FFF;
         }
     }
 }

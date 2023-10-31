@@ -1,0 +1,114 @@
+@keyframes enter-section {
+    from{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes enter-ul {
+    from{
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.hide{
+    display: none;
+}
+
+.container-sections{
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    min-height: 15rem;
+    // background: rgba(255, 255, 255, 0.04);
+    background-color: transparent;
+    border: 1px solid #E91010;
+    position: relative;
+    box-shadow: 1px 1px 5px 0px rgba(255, 255, 255, 0.04);
+    padding: 1rem;
+    border-radius: 10px;
+    animation: enter-section .5s;
+    .list-and-svg{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        > button{
+            background-color: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            color: #FFF;
+            svg{
+                font-size: 1.5rem;
+            }
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+        }
+        ul{
+            section{
+                animation: enter-ul .5s;
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                background: rgba(88, 90, 81, 0.58);
+                border-radius: 10px;
+                padding: .5rem;
+                margin-bottom: 1rem;
+                button{
+                    background-color: transparent;
+                    color: #E91010;  
+                    outline: none;
+                    border: none;
+                    cursor: pointer;
+                    svg{
+                        font-size: 1.5rem;
+                    }
+                }
+                li{
+                    list-style: none;
+                    color: #FFF;
+                }
+            }
+        }
+    }
+    .form-sections{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2%;
+        margin-top: 2rem;
+        .inputs{
+            width: 40%;
+            background: none;
+            outline: none;
+            border: 1px solid #FFF;
+            height: 2rem;
+            width: 33%;
+            text-align: center;
+            color: #FFF;
+            font-weight: 200;
+        }
+        > button{
+            width: 8rem;
+            border: none;
+            outline: none;
+            background: var(--Green-light, #E91010);
+            color: #FFF;
+            height: 2rem;
+            font-weight: 100;
+            font-size: .8rem;
+            cursor: pointer;
+        }
+    }    
+}

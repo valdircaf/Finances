@@ -2,7 +2,6 @@ import React, {useState, useContext} from "react";
 import { Link } from "react-router-dom";
 import { validateUser } from "../../Services/validateUser";
 import '../Styles/LoginComponent.scss'
-import { addUserValue } from "../../Services/setUserValue";
 import { LoginContext } from "../../Contexts/LoginContext";
 
 export default function LoginComponent(){
@@ -14,8 +13,8 @@ export default function LoginComponent(){
     return(
         <>
             <form action="register" className= {showLogin ? "form-login" : "hide"}>
-                <h1>olá, seja bem vindo!</h1>
-                <h2>faça seu login para acessar seu dashboard!</h2>
+                <h1>Olá, seja bem vindo!</h1>
+                <h2>Faça seu login ou cadastre-se para acessar seu dashboard!</h2>
                 <input type="text" name="login" className="login-input" placeholder="Login" onChange={(e)=>{
                     setLoginValue(e.target.value);
                 }}/>

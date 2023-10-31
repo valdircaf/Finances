@@ -7,7 +7,6 @@ import Register from "../Components/Register";
 
 export default function Login(){
 
-    const [registerValue, setRegisterValue] = useState(false);
     const {showLogin} = useContext(LoginContext);
 
     return(

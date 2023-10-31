@@ -1,7 +1,3 @@
-import { getUserValues } from "./validateUser";
-import { Dashboard } from "../Static/Templates/Dashboard";
-import { LoginContext } from "../Contexts/LoginContext";
-
 export function ok(code, render){
     if(code === 200){
         render(true);
@@ -20,7 +16,7 @@ export function addUserValue(login, password, render){
         }
     
         try{
-            fetch("http://localhost:8080/users", {
+            fetch("https://financesdatabase.onrender.com/users", {
                 method: "POST",
                 headers: {
                     "Content-Type" : "application/json"

@@ -1,6 +1,6 @@
 export function getSalaryValue(id){
     try{
-        fetch(`http://localhost:8080/users/${id}`, {
+        fetch(`https://financesdatabase.onrender.com/users/${id}`, {
             method: "GET"
         }).then(response => response.json()).then(data => {
             console.log(data.salary);

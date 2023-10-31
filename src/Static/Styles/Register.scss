@@ -6,16 +6,14 @@
     display: flex;   
     flex-direction: column;
     gap: 1rem;
-    padding-left: 3.75rem;
-    h1{
-        font-size: 1.2rem;
-        text-align: start;
-        font-weight: 400;
-    }
     h2{
         font-size: 1rem;
         text-align: start;
         font-weight: 400;
+        width: 90%;
+        @media screen and (max-width: 815px){
+            width: 70%;
+        }
     }
     .login-input{
         background: none;
@@ -23,7 +21,7 @@
         color: #0B0F0C;
         outline: none;
         height: 2.5rem;
-        width: 11rem;
+        width: 14rem;
         text-align: center;
         font-size: .8rem;
         &::placeholder{
@@ -33,12 +31,12 @@
         }
     }
     .password-input{
-        background: var(--Primary-color, #D36161);
+        background: var(--Primary-color, #FF0000);
         border: none;
         color: #EAF2EC;
         outline: none;
         height: 2.5rem;
-        width: 11rem;
+        width: 14rem;
         text-align: center;
         font-size: .8rem;
         &::placeholder{
@@ -53,18 +51,17 @@
         color: #0B0F0C;
         outline: none;
         height: 2.5rem;
-        width: 11rem;
+        width: 14rem;
         text-align: center;
         font-size: .8rem;
         cursor: pointer;
         transition: .5s;
         &:hover{
-            background: var(--Primary-color, #D36161);
+            background: var(--Primary-color, #FF0000);
             border: 1px solid transparent;
             color: #EAF2EC;
             outline: none;
             height: 2.5rem;
-            width: 11rem;
             text-align: center;
             font-size: .8rem;
             transition: .2s;
@@ -72,7 +69,7 @@
     }
     a{
         text-decoration: none;
-        color: #D36161;
+        color: #FF0000;
         font-size: .7rem
     }
 }

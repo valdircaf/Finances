@@ -10,16 +10,17 @@
 }
 
 .dashboard{
-    background: var(--White-color, #ffffff);
-    margin-left: 5%;
+    background: #151515;
+    min-height: 100vh;
+    margin: 2rem;
     .content{
-        padding: 5% 0 0 5%;
         display: flex;
         flex-direction: column;
         gap: 3rem;
         > h1{
             font-size: 1.5rem;
             font-weight: 400;
+            color: #FFF;
         }
         > h2{
             color: var(--Gray-color2, #9B9B9B);
@@ -46,7 +47,11 @@
         .cards{
             display: flex;
             gap: 2rem;
-
+            @media screen and (max-width: 600px){
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
             .expand-salary{
                 width: 17rem;
                 height: 8rem;
@@ -60,13 +65,14 @@
                 .edit-salary{
                     input{
                             background: transparent;
-                            border: 1px solid var(--Black-color, #0B0F0C);
-                            color: #0B0F0C;
+                            border: 1px solid var(--Black-color, #FFF);
+                            color: #FFF;
                             height: 2.5rem;
                             width: 100%;
                             text-align: center;
                             font-size: .8rem;
                             transition: .5s;
+                            margin-bottom: .5rem;
                     }
                 }
                 button{
@@ -116,176 +122,6 @@
                     display: flex;
                     gap: 1%;
                 }
-
-                .showListExpenses{
-                    width: 30rem;
-                    min-height: 20rem;
-                    border: 2px solid #E91010;
-                    background-color: transparent;
-                    border-radius: .8rem;
-                    display: flex;
-                    flex-direction: column;
-                    gap: 1rem;
-                    padding: 1rem;
-                    ul{
-                        display: flex;
-                        flex-direction: column;
-                        gap: 1rem;
-                        li{
-                            list-style: none;
-                        }
-                    }
-                    .form-add-expense{
-                        display: flex;
-                        gap: .2rem;
-                        input{
-                            background: none;
-                            border: 1px solid var(--Black-color, #0B0F0C);
-                            color: #0B0F0C;
-                            outline: none;
-                            height: 2.5rem;
-                            width: 14rem;
-                            text-align: center;
-                            font-size: .8rem;
-                            &::placeholder{
-                                color: #0B0F0C;
-                                font-size: .8rem;
-                            }
-                        }
-                        .btn-add-expense{
-                            background: #E91010;
-                            border: none;
-                            color: #EAF2EC;
-                            outline: none;
-                            height: 2.5rem;
-                            width: 20%;
-                            text-align: center;
-                            font-size: .8rem;
-                            cursor: pointer;
-                            transition: .2s;
-                            &:hover{
-                                background-color: #df4343;
-                                transition: .2s;
-                            }
-                        }
-                    }
-                    .expenses{
-                        display: flex;
-                        align-items: center;
-                        gap: 1rem;
-                        .btn-rmv-expense{
-                            background: #E91010;
-                            border: none;
-                            color: #EAF2EC;
-                            outline: none;
-                            height: 2rem;
-                            width: 20%;
-                            text-align: center;
-                            font-size: .8rem;
-                            cursor: pointer;
-                            transition: .2s;
-                            &:hover{
-                                background-color: #df4343;
-                                transition: .2s;
-                            }
-                        }
-                    }
-                }
-            }
-            .expand-other-costs{
-                width: 30rem;
-                min-height: 20rem;
-                border: 2px solid #E91010;
-                background-color: transparent;
-                border-radius: .8rem;
-                display: flex;
-                flex-direction: column;
-                gap: 1rem;
-                padding: 1rem;
-                .list-other-costs{
-                    display: flex;
-                    gap: 1rem;
-                    flex-direction: column;
-                    ul{
-                        display: flex;
-                        flex-direction: column;
-                        gap: 1rem;
-                        section{
-                            display: flex;
-                            gap: 1rem;
-                            align-items: center;
-                            button{
-                                background: #E91010;
-                                border: none;
-                                color: #EAF2EC;
-                                outline: none;
-                                height: 2rem;
-                                width: 20%;
-                                text-align: center;
-                                font-size: .8rem;
-                                cursor: pointer;
-                                transition: .2s;
-                                &:hover{
-                                    background-color: #df4343;
-                                    transition: .2s;
-                                }
-                            }
-                        }
-                        li{
-                            list-style: none;
-                        }
-                    }
-                }
-                form{
-                    display: flex;
-                    gap: .2rem;
-                    input{
-                        background: none;
-                        border: 1px solid var(--Black-color, #0B0F0C);
-                        color: #0B0F0C;
-                        outline: none;
-                        height: 2.5rem;
-                        width: 14rem;
-                        text-align: center;
-                        font-size: .8rem;
-                        &::placeholder{
-                            color: #0B0F0C;
-                            font-size: .8rem;
-                        }
-                    }
-                    button{
-                        background: #E91010;
-                        border: none;
-                        color: #EAF2EC;
-                        outline: none;
-                        height: 2.5rem;
-                        width: 20%;
-                        text-align: center;
-                        font-size: .8rem;
-                        cursor: pointer;
-                        transition: .2s;
-                        &:hover{
-                            background-color: #df4343;
-                            transition: .2s;
-                        }
-                    }
-                }
-                .close-expand-cost{
-                    background: #E91010;
-                    border: none;
-                    color: #EAF2EC;
-                    outline: none;
-                    height: 2.5rem;
-                    width: 100%;
-                    text-align: center;
-                    font-size: .8rem;
-                    cursor: pointer;
-                    transition: .2s;
-                    &:hover{
-                        background-color: #df4343;
-                        transition: .2s;
-                    }
-                }
             }
             .other-costs{
                 display: flex;
@@ -300,7 +136,6 @@
         }
     }
     .total{
-        padding-left: 5%;
         margin: 5% 0 5% 0;
     }
 }

@@ -7,7 +7,7 @@ export function validateUser(name, password){
 
    
     try{
-        fetch("http://localhost:8080/users", {
+        fetch("https://financesdatabase.onrender.com/users", {
             method: "GET"
         }).then(response => response.json()).then(data => {
             if(data.length > 0){

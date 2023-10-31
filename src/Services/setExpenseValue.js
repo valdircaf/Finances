@@ -7,7 +7,7 @@ export function addExtense(id, expenseName, expenseValue){
 
     if(expenseName != "" && expenseValue != 0){
         try{
-            fetch(`http://localhost:8080/${id}/expense`, {
+            fetch(`https://financesdatabase.onrender.com/${id}/expense`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

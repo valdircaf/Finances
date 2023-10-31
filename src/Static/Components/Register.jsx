@@ -12,8 +12,7 @@ export default function Register(){
 
     return(
         <form action="register" className={!showLogin ? "form-register" : "hide"}>
-            <h1>olá, seja bem vindo!</h1>
-            <h2>faça seu cadastro, para acessar seu dashboard!</h2>
+            <h2>Faça seu cadastro, para acessar seu dashboard!</h2>
             <input type="text" name="login" className="login-input" placeholder="Login" onChange={(e)=>{
                 setLoginValue(e.target.value);
             }}/>
@@ -23,6 +22,7 @@ export default function Register(){
             <button type="submit" onClick={(e)=>{
                 e.preventDefault();
                 addUserValue(loginValue, passwordValue, setShowLogin);
+                alert("Usuário cadastrado com sucesso!");
             }} className="btn-login">Cadastrar</button>
             <Link onClick={()=>{
                 setShowLogin(true);

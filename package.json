@@ -39,7 +39,6 @@
   },
   "devDependencies": {
     "install": "^0.13.0",
-    "node-sass": "^7.0.3",
     "npm": "^10.2.1",
     "sass": "^1.69.5"
   }

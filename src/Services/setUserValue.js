@@ -10,7 +10,7 @@ export function ok(code, render){
 
 export function addUserValue(login, password, render){
     
-    if(login != "" && password != ""){
+    if(login !== "" && password !== ""){
         const data = {
             login: login,
             password: password,
